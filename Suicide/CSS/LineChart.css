@@ -1,0 +1,102 @@
+
+#linechart {
+  display: block;
+    border: 1px solid black;
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+}
+
+
+
+#legend_title {
+    font-size: 20;
+    fill: rgb(233, 233, 32);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.axisDark line{
+    stroke: rgb(53, 53, 53);
+  }
+  
+  .axisDark path{
+    stroke: rgb(53, 53, 53);
+  }
+  
+  .axisDark text{
+    fill: rgb(53, 53, 53);
+  }  
+
+  <ul>
+    <li style="--line-index: 0"></li>
+    <li style="--line-index: 1"></li>
+    <li style="--line-index: 2"></li>
+    <li style="--line-index: 3"></li>
+    <li style="--line-index: 4"></li>
+    <li style="--line-index: 5"></li>
+ </ul>
+ <div class="listX"><img src="./img/book-2.png" alt=""></div>
+ 
+ //样式
+ ul,li {
+     list-style: none;
+}
+ul{
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 225px;
+  font-size: 0;
+}
+li{
+  width: 38px;
+  position: absolute;
+  bottom: -6px;
+  animation: height 0.4s ease-out;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  background: linear-gradient(to bottom, #7abcff 0%, #00BCD4 44%, #2196F3 100%);
+  box-shadow: 0 14px 28px rgba(33, 150, 243, 0), 0 10px 10px rgba(9, 188, 215, 0.08);
+  
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  
+  //增加的样式
+  --height: calc((var(--line-index) + 1) * 30px);
+  --time: calc(var(--line-index) * 300ms);
+  height: var(--height);
+  animation: animate-height 0.4s ease-out var(--time);
+}
+
+//已修改的li，不用累赘写 li 的高度 + 动画的时间
+li:nth-child(1){
+  left: 26px;
+}
+ li:nth-child(2){
+  left: 100px;
+}
+ li:nth-child(3){
+  left: 175px;
+}
+ li:nth-child(4){
+  left: 251px;
+}
+ li:nth-child(5){
+  left: 325px;
+}
+ li:nth-child(6){
+  left: 400px;
+}
+@keyframes height {
+  0%{
+    height: 0;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+.listX{
+  text-align: left;
+}
+.listX img{
+  width: 477px;
+}

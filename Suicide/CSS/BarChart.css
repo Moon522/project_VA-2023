@@ -1,0 +1,63 @@
+
+#barchart {
+  display: block;
+    border: 1px solid black;
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.explain {
+  display: block;
+    width: 100%;
+    height: 200px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    
+}
+
+#legend_title {
+    font-size: 20;
+    fill: rgb(233, 233, 32);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.axisDark line{
+    stroke: rgb(53, 53, 53);
+  }
+  
+  .axisDark path{
+    stroke: rgb(53, 53, 53);
+  }
+  
+  .axisDark text{
+    fill: rgb(53, 53, 53);
+  }  
+  .line {
+    width: calc(100% - 102px);
+    height: 200px;
+    position: absolute;
+    left: 51px;
+ }
+ .line svg {
+   width: 100%;height: 100%;
+   color: red;
+   stroke: currentColor;
+   stroke-width: 1;
+   overflow: visible;
+   transform: scaleY(-1);
+ }
+ circle {
+   stroke: currentColor;
+   stroke-width: 1;
+   fill: #fff;
+ }
+ .line line {
+   marker-start: url(#dot)
+ }
+ .line line:last-child {
+   marker-end: url(#dot)
+ }
